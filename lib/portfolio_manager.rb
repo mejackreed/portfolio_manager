@@ -1,5 +1,2 @@
-require "portfolio_manager/version"
-
-module PortfolioManager
-  # Your code goes here...
-end
+require 'portfolio_manager/rest/client'
+require 'portfolio_manager/version'

@@ -1,6 +1,6 @@
 # PortfolioManager
 
-A Ruby client for the [EnergyStar Portfolio Manager web services](http://portfoliomanager.energystar.gov/webservices/home).
+A Ruby client for the [EnergyStar Portfolio Manager web services](http://portfoliomanager.energystar.gov/webservices/home). Inspired by the [Twitter Ruby Gem](https://github.com/sferik/twitter).
 
 ## Installation
 
@@ -16,7 +16,14 @@ And then execute:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+```ruby
+client = PortfolioManager::REST::Client.new do |config|
+  config.username = 'user'
+  config.password = 'secret password'
+end
+```
 
 ## Contributing
 
