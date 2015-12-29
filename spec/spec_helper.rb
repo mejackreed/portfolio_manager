@@ -2,6 +2,9 @@ $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'portfolio_manager'
 require 'webmock/rspec'
 require 'nokogiri'
+require 'coveralls'
+
+Coveralls.wear!
 
 RSpec::Matchers.define :have_xpath do |xpath|
   match do |str|
