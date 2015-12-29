@@ -1,4 +1,5 @@
 # PortfolioManager
+[![Build Status](https://travis-ci.org/mejackreed/portfolio_manager.svg?branch=master)](https://travis-ci.org/mejackreed/portfolio_manager) | [![Coverage Status](https://coveralls.io/repos/mejackreed/portfolio_manager/badge.svg?branch=master&service=github)](https://coveralls.io/github/mejackreed/portfolio_manager?branch=master)
 
 A Ruby client for the [EnergyStar Portfolio Manager web services](http://portfoliomanager.energystar.gov/webservices/home). Inspired by the [Twitter Ruby Gem](https://github.com/sferik/twitter).
 

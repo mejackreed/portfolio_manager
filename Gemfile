@@ -6,4 +6,5 @@ gemspec
 group :test do
   gem 'webmock'
   gem 'nokogiri'
+  gem 'coveralls', require: false
 end
