@@ -1,4 +1,5 @@
 require 'hurley'
+require 'nori'
 
 module PortfolioManager
   module REST
@@ -9,7 +10,7 @@ module PortfolioManager
       LIVE_PATH = '/ws'
       TEST_PATH = '/wstest'
 
-      attr_reader :client, :path, :request_method
+      attr_reader :client, :path, :request_method, :parser
       ##
       # @param [PortfolioManager::Client] client
       # @param [Symbol, String] request_method
@@ -21,16 +22,23 @@ module PortfolioManager
         @options = options
         @request_method = request_method
         @conn = Hurley::Client.new(BASE_URL)
+        @parser = Nori.new
         setup_client
       end
 
       ##
-      # @return [String]
+      # @return [Hash]
       def perform
-        @conn.public_send(request_method, api_environment + path).body
+        parser.parse(response_body)
       end
 
       private
+
+      ##
+      # @return [String]
+      def response_body
+        @conn.public_send(request_method, api_environment + path).body
+      end
 
       def setup_client
         @conn.header[:user_agent] = 'Ruby PortfolioManager API Client'
