@@ -1,0 +1,32 @@
+<account>
+  <id>68001</id>
+  <username>acme_dx_user</username>
+  <password>********</password>
+  <webserviceUser>true</webserviceUser>
+  <searchable>true</searchable>
+  <contact>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <address address1="123 Main St" city="Arlington" state="VA" postalCode="22201" country="US"/>
+    <email>john_doe@acme.com</email>
+    <jobTitle>Building Administrator Data Exchange User</jobTitle>
+  <phone>703-555-2121</phone>
+  </contact>
+  <organization name="ACME Corporation">
+    <primaryBusiness>Other</primaryBusiness>
+    <otherBusinessDescription>other</otherBusinessDescription>
+    <energyStarPartner>true</energyStarPartner>
+    <energyStarPartnerType>Service and Product Providers</energyStarPartnerType>
+  </organization>
+  <securityAnswers>
+    <securityAnswer>
+      <question id="-1"/>
+      <answer>New York</answer>
+    </securityAnswer>
+    <securityAnswer>
+      <question id="-2"/>
+      <answer>Main St</answer>
+    </securityAnswer>
+  </securityAnswers>
+  <includeTestPropertiesInGraphics>true</includeTestPropertiesInGraphics>
+</account>

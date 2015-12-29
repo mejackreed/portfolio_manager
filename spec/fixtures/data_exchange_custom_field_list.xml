@@ -1,0 +1,6 @@
+<response status="Ok">
+  <links>
+    <link hint="Lot Number" httpMethod="GET" link="/dataExchangeSettings/customField/2" linkDescription="This is the GET url for this custom ID."/>
+    <link hint="Jurisdiction ID" httpMethod="GET" link="/dataExchangeSettings/customField/1" linkDescription="This is the GET url for this custom ID."/>
+  </links>
+</response>

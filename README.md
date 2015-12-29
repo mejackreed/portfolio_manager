@@ -22,6 +22,8 @@ And then execute:
 client = PortfolioManager::REST::Client.new do |config|
   config.username = 'user'
   config.password = 'secret password'
+  # Use the "live" site
+  config.live     = true #defaults to false
 end
 ```
 

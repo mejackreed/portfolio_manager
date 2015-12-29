@@ -14,5 +14,8 @@ describe PortfolioManager::REST::Client do
       expect(client.instance_variable_get('@username')).to eq 'foo'
       expect(client.instance_variable_get('@password')).to eq 'bar'
     end
+    it 'sets @live as false by default' do
+      expect(described_class.new.live).to eq false
+    end
   end
 end
