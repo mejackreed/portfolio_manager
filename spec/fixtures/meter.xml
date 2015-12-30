@@ -1,0 +1,18 @@
+<meter>
+  <id>543</id>
+  <type>Electric</type>
+  <name>Electric Main Meter</name>
+  <unitOfMeasure>kBtu (thousand Btu)</unitOfMeasure>
+  <metered>true</metered>
+  <firstBillDate>2010-01-01</firstBillDate>
+  <inUse>true</inUse>
+  <accessLevel>Read</accessLevel>
+  <audit>
+    <createdBy>DUNAYT</createdBy>
+    <createdByAccountId>-14</createdByAccountId>
+    <createdDate>2012-08-16T17:04:57-04:00</createdDate>
+    <lastUpdatedBy>DUNAYT</lastUpdatedBy>
+    <lastUpdatedByAccountId>-14</lastUpdatedByAccountId>
+    <lastUpdatedDate>2012-08-16T17:09:35-04:00</lastUpdatedDate>
+  </audit>
+</meter>
