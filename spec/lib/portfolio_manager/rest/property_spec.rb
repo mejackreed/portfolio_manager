@@ -1,16 +1,7 @@
 require 'spec_helper'
 
-describe PortfolioManager::REST::Account do
+describe PortfolioManager::REST::Property do
   let(:client) { test_client }
-  describe '#account' do
-    before do
-      stub_get('/account').to_return(body: fixture('account.xml'))
-    end
-    it 'returns an account element' do
-      expect(client.account['account'])
-        .to include 'id', 'contact', 'organization'
-    end
-  end
   describe '#property_list' do
     let(:id) { 680_01 }
     before do

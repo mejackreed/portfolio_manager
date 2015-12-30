@@ -1,0 +1,6 @@
+<response status="Ok">
+  <links>
+    <link id="86" httpMethod="GET" link="/building/86" linkDescription="This is the GET url for this Building." hint="ACME Convenience Store"/>
+    <link id="34" httpMethod="GET" link="/building/34" linkDescription="This is the GET url for this Building." hint="ACME Grocery"/>
+  </links>
+</response>

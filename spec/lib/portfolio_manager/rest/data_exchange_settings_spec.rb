@@ -8,8 +8,8 @@ describe PortfolioManager::REST::DataExchangeSettings do
         .to_return(body: fixture('data_exchange_settings.xml'))
     end
     it 'returns an dataExchangeSettings element' do
-      expect(client.data_exchange_settings)
-        .to have_xpath('/dataExchangeSettings')
+      expect(client.data_exchange_settings['dataExchangeSettings'])
+        .to include 'termsOfUse', 'supportedMeterTypes'
     end
   end
   describe '#data_exchange_custom_field_list' do
@@ -18,10 +18,11 @@ describe PortfolioManager::REST::DataExchangeSettings do
         .to_return(body: fixture('data_exchange_custom_field_list.xml'))
     end
     it 'returns a response element and links' do
-      expect(client.data_exchange_custom_field_list)
-        .to have_xpath('/response')
-      expect(client.data_exchange_custom_field_list)
-        .to have_xpath('/response/links/link')
+      client
+        .data_exchange_custom_field_list['response']['links']['link']
+        .each do |link|
+          expect(link).to include '@link'
+        end
     end
   end
 end

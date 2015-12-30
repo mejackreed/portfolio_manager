@@ -1,0 +1,6 @@
+<response status="Ok">
+  <links>
+    <link httpMethod="GET" link="/meter/41" linkDescription="This is the GET url for this Meter." hint="Electric Main Meter"/>
+    <link httpMethod="GET" link="/meter/23" linkDescription="This is the GET url for this Meter." hint="Water Main Meter"/>
+  </links>
+</response>
