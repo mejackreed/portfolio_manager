@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Jack Reed']
   spec.email         = ['phillipjreed@gmail.com']
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{A Ruby client for the EnergyStar Portfolio Manager web services.}
+  spec.description   = %q{A Ruby client for the EnergyStar Portfolio Manager web services.}
   spec.homepage      = 'https://github.com/mejackreed/portfolio_manager'
   spec.license       = 'MIT'
 
