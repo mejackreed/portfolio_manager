@@ -1,0 +1,9 @@
+<response status="Ok">
+  <links>
+    <link id="143" hint="QWERTY Company" httpMethod="GET" link="/customer/143" linkDescription="This is the GET url for this Customer."/>
+    <link id="5432" hint="Galaxy Corp" httpMethod="GET" link="/customer/5432" linkDescription="This is the GET url for this Customer."/>
+    <link id="5553" hint="Thrift Bank" httpMethod="GET" link="/customer/5553" linkDescription="This is the GET url for this Customer."/>
+    <link id="1454" httpMethod="GET" link="/customer/1454" linkDescription="This is the GET url for this Customer."/>
+    <link id="86785" hint="Sample Company" httpMethod="GET" link="/customer/86785" linkDescription="This is the GET url for this Customer."/>
+  </links>
+</response>
