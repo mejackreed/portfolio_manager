@@ -11,7 +11,7 @@ module PortfolioManager
       TEST_PATH = '/wstest'
       CONTENT_TYPE = 'application/xml'
 
-      attr_reader :client, :path, :request_method, :parser, :request_body, :full_path
+      attr_reader :client, :path, :request_method, :parser
       attr_accessor :options
       ##
       # @param [PortfolioManager::Client] client
@@ -66,10 +66,6 @@ module PortfolioManager
         options[:query].each do |key, value|
           @conn.query[key] = value
         end unless options[:query].nil?
-      end
-
-      def set_body
-        @request_body = options[:body]
       end
 
       def set_basic_authentication
