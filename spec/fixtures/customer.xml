@@ -1,0 +1,13 @@
+<customer>
+    <username>acme_customer</username>
+    <includeTestPropertiesInGraphics>true</includeTestPropertiesInGraphics>
+    <accountInfo>
+        <firstName>John</firstName>
+        <lastName>Doe</lastName>
+        <address address1="123 Main St" city="Arlington"
+                 state="VA" postalCode="22201" country="US"/>
+        <email>john_doe@acme.com</email>
+        <organization>ACME Corporation</organization>
+        <jobTitle>Building Administrator Data Exchange User</jobTitle>
+    </accountInfo>
+</customer>

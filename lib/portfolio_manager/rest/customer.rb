@@ -21,7 +21,7 @@ module PortfolioManager
       #
       # https://portfoliomanager.energystar.gov/webservices/home/api/account/customer/get
       def customer(customer_id)
-        perform_get_request("/cutomer/#{customer_id}")
+        perform_get_request("/customer/#{customer_id}")
       end
     end
   end

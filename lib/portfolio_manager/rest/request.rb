@@ -9,6 +9,7 @@ module PortfolioManager
       BASE_URL  = 'https://portfoliomanager.energystar.gov'
       LIVE_PATH = '/ws'
       TEST_PATH = '/wstest'
+      CONTENT_TYPE = 'application/xml'
 
       attr_reader :client, :path, :request_method, :parser
       attr_accessor :options
@@ -19,7 +20,7 @@ module PortfolioManager
       # @param [Hash] options used for creating query params and headers
       def initialize(client, request_method, path, options)
         @client = client
-        @path = path
+        @path = api_environment + path
         @options = options
         @request_method = request_method
         @conn = Hurley::Client.new(BASE_URL)
@@ -38,7 +39,14 @@ module PortfolioManager
       ##
       # @return [String]
       def response_body
-        @conn.public_send(request_method, api_environment + path).body
+        case request_method
+        when :get
+          @conn.get(path).body
+        when :post
+          @conn.post(path, options[:body], CONTENT_TYPE).body
+        else
+          raise ArgumentError, '#{request_method} is not yet implemented'
+        end
       end
 
       def setup_client
