@@ -15,6 +15,13 @@ module PortfolioManager
       end
 
       ##
+      # @param [String] path
+      # @param [Hash] options
+      def perform_post_request(path, options = {})
+        perform_request(:post, path, options)
+      end
+
+      ##
       # @param [Symbol, String] request_method
       # @param [String] path
       # @param [Hash] options
