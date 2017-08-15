@@ -3,8 +3,8 @@ require 'portfolio_manager/rest/utils'
 module PortfolioManager
   module REST
     ##
-    # Customer services
-    # @see https://portfoliomanager.energystar.gov/webservices/home/api/account
+    # Connection services
+    # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection
     module Connection
       include PortfolioManager::REST::Utils
 
@@ -40,7 +40,7 @@ module PortfolioManager
             xml.note note
           }
         end
-        builder.doc.root.to_s
+        builder.doc.root.to_xml
       end
     end
   end
