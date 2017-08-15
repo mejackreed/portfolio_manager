@@ -1,0 +1,55 @@
+<pendingList>
+    <account>
+        <accountId>68023</accountId>
+        <customFieldList>
+            <customField name="Customer Number">D987DDD</customField>
+            <customField name="Group Code">G81113</customField>
+        </customFieldList>
+        <accountInfo>
+            <firstName>Jane</firstName>
+            <lastName>Doe</lastName>
+            <address address1="2343 Main Street" city="Arlington"
+                     state="VA" postalCode="22201" country="US"/>
+            <email>jane_doe@acme.com</email>
+            <organization>ACME Corp</organization>
+            <jobTitle>Building Adminstrator</jobTitle>
+            <phone>800-555-1515</phone>
+        </accountInfo>
+        <connectionAudit>
+            <createdBy>acme_jane</createdBy>
+            <createdByAccountId>68023</createdByAccountId>
+            <createdDate>2014-12-04T11:29:54.000-05:00</createdDate>
+            <lastUpdatedBy>acme_jane</lastUpdatedBy>
+            <lastUpdatedByAccountId>68023</lastUpdatedByAccountId>
+            <lastUpdatedDate>2014-12-04T16:29:54.000-05:00</lastUpdatedDate>
+        </connectionAudit>
+    </account>
+    <account>
+        <accountId>3243</accountId>
+        <customFieldList>
+            <customField name="Customer Number">X868867D</customField>
+            <customField name="Group Code">G93328788</customField>
+        </customFieldList>
+        <accountInfo>
+            <firstName>Joe</firstName>
+            <lastName>Smith</lastName>
+            <address address1="3432 Times Square Blvd" city="New York City"
+                     postalCode="10453" state="NY" country="US"/>
+            <email>joe_smith@sample.com</email>
+            <organization>Sample Company</organization>
+            <jobTitle>Building Adminstrator</jobTitle>
+            <phone>800-555-1515</phone>
+        </accountInfo>
+        <connectionAudit>
+            <createdBy>acme_smith</createdBy>
+            <createdByAccountId>3243</createdByAccountId>
+            <createdDate>2014-12-03T11:29:54.000-05:00</createdDate>
+            <lastUpdatedBy>acme_smith</lastUpdatedBy>
+            <lastUpdatedByAccountId>3243</lastUpdatedByAccountId>
+            <lastUpdatedDate>2014-12-03T16:29:54.000-05:00</lastUpdatedDate>
+        </connectionAudit>
+    </account>
+    <links>
+        <link linkDescription="next page" link="/connect/account/pending/list?page=2" httpMethod="GET"/>
+    </links>
+</pendingList>
