@@ -21,6 +21,10 @@ def stub_get(path)
   stub_request(:get, /#{stubbed_url + path}/)
 end
 
+def stub_post(path)
+  stub_request(:post, /#{stubbed_url + path}/)
+end
+
 def stubbed_url
   URI(PortfolioManager::REST::Request::BASE_URL).host +
     PortfolioManager::REST::Request::TEST_PATH
