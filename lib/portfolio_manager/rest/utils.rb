@@ -33,6 +33,15 @@ module PortfolioManager
           options
         ).perform
       end
+
+      def request_response_xml(action, note)
+        builder = Nokogiri::XML::Builder.new do |xml|
+          xml.sharingResponse {
+            xml.action action
+            xml.note note
+          }
+        end.to_xml
+      end
     end
   end
 end
