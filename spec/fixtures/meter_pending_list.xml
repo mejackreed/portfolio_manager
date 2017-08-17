@@ -1,0 +1,113 @@
+<pendingList>
+    <meter>
+        <meterId>6067821</meterId>
+        <propertyId>3635611</propertyId>
+        <accountId>87656</accountId>
+        <customFieldList>
+            <customField name="Meter Number">123</customField>
+        </customFieldList>
+        <accessLevel>Read Write</accessLevel>
+        <propertyInfo>
+            <name>Broadway Elementary</name>
+            <address address1="91 Broadway Street" city="Arlington" postalCode="20221" state="VA" country="US"/>
+            <numberOfBuildings>0</numberOfBuildings>
+            <constructionStatus>Existing</constructionStatus>
+            <primaryFunction>Office</primaryFunction>
+            <yearBuilt>2000</yearBuilt>
+            <grossFloorArea units="Square Feet" temporary="false" default="N/A">
+                <value>10000</value>
+            </grossFloorArea>
+            <occupancyPercentage>90</occupancyPercentage>
+            <isFederalProperty>false</isFederalProperty>
+            <audit>
+                <createdBy>vaschools</createdBy>
+                <createdByAccountId>87656</createdByAccountId>
+                <createdDate>2012-08-02T18:32:24-04:00</createdDate>
+                <lastUpdatedBy>vaschools</lastUpdatedBy>
+                <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+                <lastUpdatedDate>2012-08-02T18:33:16-04:00</lastUpdatedDate>
+            </audit>
+        </propertyInfo>
+        <meterInfo>
+            <name>Electric Grid Meter</name>
+            <metered>true</metered>
+            <firstBillDate>2000-01-01</firstBillDate>
+            <inUse>true</inUse>
+            <audit>
+                <createdBy>vaschools</createdBy>
+                <createdByAccountId>87656</createdByAccountId>
+                <createdDate>2012-08-02T18:33:41-04:00</createdDate>
+                <lastUpdatedBy>vaschools</lastUpdatedBy>
+                <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+                <lastUpdatedDate>2012-08-02T18:33:41-04:00</lastUpdatedDate>
+            </audit>
+            <type>Electric</type>
+            <unitOfMeasure>kWh (thousand Watt-hours)</unitOfMeasure>
+        </meterInfo>
+        <shareAudit>
+            <createdBy>acme_school</createdBy>
+            <createdByAccountId>87656</createdByAccountId>
+            <createdDate>2014-12-03T11:29:54.000-05:00</createdDate>
+            <lastUpdatedBy>acme_school</lastUpdatedBy>
+            <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+            <lastUpdatedDate>2014-12-03T16:29:54.000-05:00</lastUpdatedDate>
+        </shareAudit>
+    </meter>
+    <meter>
+        <meterId>6067822</meterId>
+        <propertyId>3635611</propertyId>
+        <accountId>87656</accountId>
+        <customFieldList>
+            <customField name="Meter Number">123</customField>
+        </customFieldList>
+        <accessLevel>Read Write</accessLevel>
+        <propertyInfo>
+            <name>Broadway Elementary</name>
+            <address address1="91 Broadway Street" city="Arlington" postalCode="20221" state="VA" country="US"/>
+            <numberOfBuildings>0</numberOfBuildings>
+            <constructionStatus>Existing</constructionStatus>
+            <primaryFunction>Office</primaryFunction>
+            <yearBuilt>2000</yearBuilt>
+            <grossFloorArea units="Square Feet" temporary="false" default="N/A">
+                <value>10000</value>
+            </grossFloorArea>
+            <occupancyPercentage>90</occupancyPercentage>
+            <isFederalProperty>false</isFederalProperty>
+            <audit>
+                <createdBy>vaschools</createdBy>
+                <createdByAccountId>87656</createdByAccountId>
+                <createdDate>2012-08-02T18:32:24-04:00</createdDate>
+                <lastUpdatedBy>vaschools</lastUpdatedBy>
+                <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+                <lastUpdatedDate>2012-08-02T18:33:16-04:00</lastUpdatedDate>
+            </audit>
+        </propertyInfo>
+        <meterInfo>
+            <name>Electric Grid Meter</name>
+            <metered>true</metered>
+            <firstBillDate>2000-01-01</firstBillDate>
+            <inUse>true</inUse>
+            <audit>
+                <createdBy>vaschools</createdBy>
+                <createdByAccountId>87656</createdByAccountId>
+                <createdDate>2012-08-02T18:33:41-04:00</createdDate>
+                <lastUpdatedBy>vaschools</lastUpdatedBy>
+                <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+                <lastUpdatedDate>2012-08-02T18:33:41-04:00</lastUpdatedDate>
+            </audit>
+            <type>Electric</type>
+            <unitOfMeasure>kWh (thousand Watt-hours)</unitOfMeasure>
+        </meterInfo>
+        <shareAudit>
+            <createdBy>acme_school</createdBy>
+            <createdByAccountId>87656</createdByAccountId>
+            <createdDate>2014-12-03T11:29:54.000-05:00</createdDate>
+            <lastUpdatedBy>acme_school</lastUpdatedBy>
+            <lastUpdatedByAccountId>87656</lastUpdatedByAccountId>
+            <lastUpdatedDate>2014-12-03T16:29:54.000-05:00</lastUpdatedDate>
+        </shareAudit>
+    </meter>
+    <links>
+        <link linkDescription="next page" link="/share/meter/pending/list?page=2" httpMethod="GET"/>
+    </links>
+</pendingList>

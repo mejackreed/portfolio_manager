@@ -7,40 +7,37 @@ module PortfolioManager
     # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection
     module Connection
       include PortfolioManager::REST::Utils
-
+      REJECT_NOTE = 'Unfortunately we cannot provide services for you at this time.'.freeze
+      ACCEPT_NOTE = 'Your connection request has been verified and accepted.'.freeze
+      
       ##
-      # Returns a list of customer connection requests that are pending.
+      # This web service returns a list of pending customer connection requests.
+      # A connection to the customer must be established first before any properties and meters can be shared with you.
+      # The list of pending customer connection requests is returned in sets of 20.
       #
       # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection/pendingAccountList/get
-      def pending_list
-        perform_get_request("/connect/account/pending/list")
+      def pending_connections(link = nil)
+        link ||= '/connect/account/pending/list'
+        perform_get_request(link)
       end
 
       ##
       # Accepts/rejects a pending connection request from a specific customer.
       #
-      # https://portfoliomanager.energystar.gov/webservices/home/api/connection/connect/post
-      def connection(customer_id, accept = true)
+      # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection/connect/post
+      def connection_request(customer_id, accept = true)
         perform_post_request(
             "/connect/account/#{customer_id}",
-            body: request_body(accept)
+            body: connection_response_body(accept)
           )
       end
 
       private
 
-      def request_body(accept)
-        reject_note = 'Unfortunately we cannot provide services for you at this time.'
-        accept_note = 'Your connection request has been verified and accepted.'
+      def connection_response_body(accept)
         action = accept ? 'Accept' : 'Reject'
-        note = accept ? accept_note : reject_note
-        builder = Nokogiri::XML::Builder.new do |xml|
-          xml.sharingResponse {
-            xml.action action
-            xml.note note
-          }
-        end
-        builder.doc.root.to_xml
+        note = accept ? ACCEPT_NOTE : REJECT_NOTE
+        request_response_xml(action, note)
       end
     end
   end

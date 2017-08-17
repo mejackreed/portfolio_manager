@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <sharingResponse>
   <action>Reject</action>
-  <note>Unfortunately we cannot provide services for you at this time.</note>
+  <note>Your meter sharing request has been rejected.</note>
 </sharingResponse>
