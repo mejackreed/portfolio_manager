@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/utils'
 
 module PortfolioManager
@@ -7,9 +9,9 @@ module PortfolioManager
     # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection
     module Connection
       include PortfolioManager::REST::Utils
-      REJECT_NOTE = 'Unfortunately we cannot provide services for you at this time.'.freeze
-      ACCEPT_NOTE = 'Your connection request has been verified and accepted.'.freeze
-      
+      REJECT_NOTE = 'Unfortunately we cannot provide services for you at this time.'
+      ACCEPT_NOTE = 'Your connection request has been verified and accepted.'
+
       ##
       # This web service returns a list of pending customer connection requests.
       # A connection to the customer must be established first before any properties and meters can be shared with you.
@@ -27,9 +29,9 @@ module PortfolioManager
       # @see https://portfoliomanager.energystar.gov/webservices/home/api/connection/connect/post
       def connection_request(customer_id, accept = true)
         perform_post_request(
-            "/connect/account/#{customer_id}",
-            body: connection_response_body(accept)
-          )
+          "/connect/account/#{customer_id}",
+          body: connection_response_body(accept)
+        )
       end
 
       private

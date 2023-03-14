@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/utils'
 
 module PortfolioManager
@@ -13,7 +15,7 @@ module PortfolioManager
       #
       # @see https://portfoliomanager.energystar.gov/webservices/home/api/account/customerList/get
       def customer_list
-        perform_get_request("/customer/list")
+        perform_get_request('/customer/list')
       end
 
       ##

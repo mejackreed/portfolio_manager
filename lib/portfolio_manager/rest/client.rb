@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/api'
 require 'portfolio_manager/rest/utils'
 

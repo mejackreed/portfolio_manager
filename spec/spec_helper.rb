@@ -1,4 +1,6 @@
-$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+# frozen_string_literal: true
+
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 require 'portfolio_manager'
 require 'webmock/rspec'
 require 'coveralls'
@@ -6,11 +8,11 @@ require 'coveralls'
 Coveralls.wear!
 
 def fixture(file)
-  File.new(fixture_path + '/' + file)
+  File.new("#{fixture_path}/#{file}")
 end
 
 def fixture_path
-  File.expand_path('../fixtures', __FILE__)
+  File.expand_path('fixtures', __dir__)
 end
 
 def test_client
