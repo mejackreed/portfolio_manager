@@ -40,6 +40,8 @@ HTTP | Path | Method | Description
 GET | /account | `account` | Returns general information for your account.
 GET | /dataExchangeSettings | `data_exchange_settings` | Returns the settings that define your data exchange service offerings.
 GET | /dataExchangeSettings/customField/list | `data_exchange_custom_field_list` | Returns a list of custom fields that you have defined for your account.
+GET | /customer/list | `customer_list` | Returns a list of customers that you are connected to.
+GET | /customer/(customerId) | `customer(customer_id)` | Returns general account information for a specific customer that you are connected to.
 
 #### Property Services
 http://portfoliomanager.energystar.gov/webservices/home/api/property
@@ -66,6 +68,17 @@ GET | /meter/(meterId) | `meter(meter_id)` | 	Returns information for a specifie
 GET | /property/(propertyId)/meter/list	| `meter_list(property_id)` | Returns a list of meters for a specified property.
 GET | /meter/(meterId)/consumptionData?page=(page)&startDate=(YYYY-MM-DD)&endDate=(YYYY-MM-DD) | `metrics(property_id, year, month, measurement_system, metric)` | Returns the consumption data for a specified meter in sets of 20.
 
+#### Connection/Share Services
+https://portfoliomanager.energystar.gov/webservices/home/api/connection
+
+HTTP | Path | Method | Description
+---- | ---- | ------ | -----------
+GET | /connect/account/pending/list | `pending_connections(link = nil)` | Returns a list of customer connection requests that are pending.
+POST | /connect/account/(accountId) | `connection_request(customer_id, accept = true)` | Accepts/rejects a pending connection request from a specific customer.
+GET | /share/property/pending/list | `pending_property_shares(link = nil)` | Returns a list of property share requests that are pending. These property share requests belong to customers that you are already connected to.
+POST | /share/property/(propertyId) | `property_share_request(property_id, accept = true)` | Accepts/rejects a pending share request for a specific property.
+GET | /share/meter/pending/list | `pending_meter_shares(link = nil)` | Returns a list of meter share requests that are pending. These meter share requests belong to customers that you are already connected to.
+POST | /share/meter/(meterId) | `meter_share_request(meter_id, accept = true)` | Accepts/rejects a pending share request for a specific meter.
 
 ## Contributing
 
