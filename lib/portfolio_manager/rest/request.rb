@@ -30,7 +30,6 @@ module PortfolioManager
         @conn = Faraday.new(url: BASE_URL) do |conn|
           conn.request :authorization, :basic, client.username, client.password
           conn.request :xml
-          conn.response :xml
         end
         @parser = Nori.new
         setup_client

@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'portfolio_manager/rest/request'
+require 'nokogiri'
 
 module PortfolioManager
   module REST
