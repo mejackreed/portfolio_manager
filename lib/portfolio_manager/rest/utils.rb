@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/request'
 
 module PortfolioManager
@@ -35,11 +37,11 @@ module PortfolioManager
       end
 
       def request_response_xml(action, note)
-        builder = Nokogiri::XML::Builder.new do |xml|
-          xml.sharingResponse {
+        Nokogiri::XML::Builder.new do |xml|
+          xml.sharingResponse do
             xml.action action
             xml.note note
-          }
+          end
         end.to_xml
       end
     end

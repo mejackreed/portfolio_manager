@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/account'
 require 'portfolio_manager/rest/building'
 require 'portfolio_manager/rest/data_exchange_settings'

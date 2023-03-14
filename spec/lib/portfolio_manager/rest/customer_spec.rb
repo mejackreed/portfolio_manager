@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 require 'spec_helper'
 
 describe PortfolioManager::REST::Customer do
   let(:client) { test_client }
   describe '#customer_list' do
     before do
-      stub_get("/customer/list")
+      stub_get('/customer/list')
         .to_return(body: fixture('customer_list.xml'))
     end
 
@@ -16,7 +18,7 @@ describe PortfolioManager::REST::Customer do
   end
 
   describe '#customer' do
-    let(:id) { 68001 }
+    let(:id) { 68_001 }
     before do
       stub_get("/customer/#{id}")
         .to_return(body: fixture('customer.xml'))

@@ -1,4 +1,7 @@
-require 'hurley'
+# frozen_string_literal: true
+
+require 'faraday'
+require 'faraday/xml'
 require 'nori'
 
 module PortfolioManager
@@ -13,6 +16,7 @@ module PortfolioManager
 
       attr_reader :client, :path, :request_method, :parser
       attr_accessor :options
+
       ##
       # @param [PortfolioManager::Client] client
       # @param [Symbol, String] request_method
@@ -23,7 +27,11 @@ module PortfolioManager
         @path = api_environment + path
         @options = options
         @request_method = request_method
-        @conn = Hurley::Client.new(BASE_URL)
+        @conn = Faraday.new(url: BASE_URL) do |conn|
+          conn.request :authorization, :basic, client.username, client.password
+          conn.request :xml
+          conn.response :xml
+        end
         @parser = Nori.new
         setup_client
       end
@@ -43,34 +51,38 @@ module PortfolioManager
         when :get
           @conn.get(path).body
         when :post
-          @conn.post(path, options[:body], CONTENT_TYPE).body
+          @conn.post(path, options[:body]).body
         else
-          raise ArgumentError, '#{request_method} is not yet implemented'
+          raise ArgumentError, "#{request_method} is not yet implemented"
         end
       end
 
       def setup_client
         set_header
         set_query
-        set_basic_authentication
       end
 
       def set_header
-        @conn.header[:user_agent] = 'Ruby PortfolioManager API Client'
-        options[:header].each do |key, value|
-          @conn.header[key] = value
-        end unless options[:header].nil?
+        headers = {
+          'User-Agent' => 'Ruby PortfolioManager API Client',
+          'Accept' => 'application/xml',
+          'Content-Type' => 'application/xml;charset=UTF-8'
+        }
+
+        options[:header]&.each do |key, value|
+          headers[key] = value
+        end
+
+        @conn.headers = headers
       end
 
       def set_query
-        options[:query].each do |key, value|
-          @conn.query[key] = value
-        end unless options[:query].nil?
-      end
+        params = {}
+        options[:query]&.each do |key, value|
+          params[key] = value
+        end
 
-      def set_basic_authentication
-        @conn.url.user = client.username
-        @conn.url.password = client.password
+        @conn.params = params
       end
 
       def api_environment

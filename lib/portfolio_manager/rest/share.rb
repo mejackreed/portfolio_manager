@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'portfolio_manager/rest/utils'
 
 module PortfolioManager
@@ -9,7 +11,7 @@ module PortfolioManager
       include PortfolioManager::REST::Utils
 
       ##
-      # Returns a list of property or meter share requests that are pending. 
+      # Returns a list of property or meter share requests that are pending.
       # These property share requests belong to customers that you are already connected to.
       # The list of pending property share requests is returned in sets of 20.
       #
@@ -37,17 +39,17 @@ module PortfolioManager
       end
 
       private
-      
+
       def pending_shares(resource_name, link)
-        link ||= "/share/#{resource_name}/pending/list" 
+        link ||= "/share/#{resource_name}/pending/list"
         perform_get_request(link)
       end
 
       def share_request(resource_id, resource_name, accept = true)
         perform_post_request(
-            "/share/#{resource_name}/#{resource_id}",
-            body: share_response_body(accept, resource_name)
-          )
+          "/share/#{resource_name}/#{resource_id}",
+          body: share_response_body(accept, resource_name)
+        )
       end
 
       def share_response_body(accept, resource_name)
