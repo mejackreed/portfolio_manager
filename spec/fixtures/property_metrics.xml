@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<propertyMetrics propertyId="712" month="12" year="2000" measurementSystem="EPA">
+    <metric name="score" dataType="numeric">
+        <value>75</value>
+    </metric>
+</propertyMetrics>

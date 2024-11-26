@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meterData>
+    <meterConsumption estimatedValue="false">
+        <id>-19</id>
+        <audit>
+            <createdBy>DUNAYT</createdBy>
+            <createdByAccountId>-14</createdByAccountId>
+            <createdDate>2012-05-25T09:59:06-04:00</createdDate>
+            <lastUpdatedBy>DUNAYT</lastUpdatedBy>
+            <lastUpdatedByAccountId>-14</lastUpdatedByAccountId>
+            <lastUpdatedDate>2012-05-26T09:59:06-04:00</lastUpdatedDate>
+        </audit>
+        <startDate>2011-07-09</startDate>
+        <endDate>2011-08-08</endDate>
+        <usage>638021</usage>
+    </meterConsumption>
+    <meterConsumption estimatedValue="false">
+        <id>-18</id>
+        <audit>
+            <createdBy>DUNAYT</createdBy>
+            <createdByAccountId>-14</createdByAccountId>
+            <createdDate>2012-05-25T09:59:06-04:00</createdDate>
+                <lastUpdatedBy>DUNAYT</lastUpdatedBy>
+            <lastUpdatedByAccountId>-14</lastUpdatedByAccountId>
+            <lastUpdatedDate>2012-05-25T09:59:06-04:00</lastUpdatedDate>
+        </audit>
+        <startDate>2011-06-09</startDate>
+        <endDate>2011-07-09</endDate>
+        <usage>625291</usage>
+    </meterConsumption>
+    <meterConsumption estimatedValue="false">
+        <id>-17</id>
+        <audit>
+            <createdBy>DUNAYT</createdBy>
+            <createdByAccountId>-14</createdByAccountId>
+            <createdDate>2012-05-25T09:59:06-04:00</createdDate>
+            <lastUpdatedBy>DUNAYT</lastUpdatedBy>
+            <lastUpdatedByAccountId>-14</lastUpdatedByAccountId>
+            <lastUpdatedDate>2012-05-25T09:59:06-04:00</lastUpdatedDate>
+        </audit>
+        <startDate>2011-05-10</startDate>
+        <endDate>2011-06-09</endDate>
+        <usage>610219</usage>
+    </meterConsumption>
+    <links>
+        <link httpMethod="get" link="/meter/100/consumptionData?page=1" linkDescription="previous page"/>
+    </links>
+</meterData>
