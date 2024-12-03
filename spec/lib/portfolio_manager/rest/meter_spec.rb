@@ -27,4 +27,15 @@ describe PortfolioManager::REST::Meter do
       end
     end
   end
+  describe '#consumption_data' do
+    let(:id) { 680_01 }
+    before do
+      stub_get("/meter/#{id}/consumptionData")
+        .to_return(body: fixture('meter_consumption_data.xml'))
+    end
+    it 'returns a meter' do
+      expect(client.consumption_data(id)['meterData'].keys)
+        .to include 'links', 'meterConsumption'
+    end
+  end
 end

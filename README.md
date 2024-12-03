@@ -66,7 +66,14 @@ HTTP | Path | Method | Description
 ---- | ---- | ------ | -----------
 GET | /meter/(meterId) | `meter(meter_id)` | 	Returns information for a specified meter.
 GET | /property/(propertyId)/meter/list	| `meter_list(property_id)` | Returns a list of meters for a specified property.
-GET | /meter/(meterId)/consumptionData?page=(page)&startDate=(YYYY-MM-DD)&endDate=(YYYY-MM-DD) | `metrics(property_id, year, month, measurement_system, metric)` | Returns the consumption data for a specified meter in sets of 20.
+GET | /meter/(meterId)/consumptionData?page=(page)&startDate=(YYYY-MM-DD)&endDate=(YYYY-MM-DD) | `consumption_data(meter_id, page: nil, start_date: nil, end_date: nil)` | Returns the consumption data for a specified meter in sets of 120.
+
+#### Reporting Services
+https://portfoliomanager.energystar.gov/webservices/home/api/reporting
+
+HTTP | Path | Method | Description
+---- | ---- | ------ | -----------
+GET | /property/(propertyId)/metrics | `property_metrics(property_id, year, month, measurement_system, metric)` | Returns the values for a specified set of metrics and units for a specific property and period ending date. The property must already be shared with you.
 
 #### Connection/Share Services
 https://portfoliomanager.energystar.gov/webservices/home/api/connection

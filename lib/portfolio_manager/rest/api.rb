@@ -5,6 +5,7 @@ require 'portfolio_manager/rest/building'
 require 'portfolio_manager/rest/data_exchange_settings'
 require 'portfolio_manager/rest/meter'
 require 'portfolio_manager/rest/property'
+require 'portfolio_manager/rest/reporting'
 require 'portfolio_manager/rest/customer'
 require 'portfolio_manager/rest/connection'
 require 'portfolio_manager/rest/share'
@@ -20,6 +21,7 @@ module PortfolioManager
       include PortfolioManager::REST::DataExchangeSettings
       include PortfolioManager::REST::Meter
       include PortfolioManager::REST::Property
+      include PortfolioManager::REST::Reporting
       include PortfolioManager::REST::Customer
       include PortfolioManager::REST::Connection
       include PortfolioManager::REST::Share
