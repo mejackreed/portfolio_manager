@@ -62,10 +62,13 @@ GET | /property/(propertyId)/building/list | `building_list(property_id)` | Retu
 #### Meter Services
 http://portfoliomanager.energystar.gov/webservices/home/api/meter
 
+
 HTTP | Path | Method | Description
 ---- | ---- | ------ | -----------
+GET | /customer/(customerId)/meter/whatChanged?date=(YYYY-MM-DD) | `what_changed_meter_list(customer_id, date, next_page_key: nil, previous_page_key: nil)` |  Returns a list of meters that have been modified since a specified date.
 GET | /meter/(meterId) | `meter(meter_id)` | 	Returns information for a specified meter.
 GET | /property/(propertyId)/meter/list	| `meter_list(property_id)` | Returns a list of meters for a specified property.
+GET | /customer/(customerId)/meter/consumptionData/whatChanged?date=(YYYY-MM-DD) | `what_changed_consumption_data_meter_list(customer_id, date, next_page_key: nil, previous_page_key: nil)` |  Returns a list of meters for a specified customer that have had their consumption data modified since a specified date.
 GET | /meter/(meterId)/consumptionData?page=(page)&startDate=(YYYY-MM-DD)&endDate=(YYYY-MM-DD) | `consumption_data(meter_id, page: nil, start_date: nil, end_date: nil)` | Returns the consumption data for a specified meter in sets of 120.
 
 #### Reporting Services
