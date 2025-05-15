@@ -40,6 +40,19 @@ describe PortfolioManager::REST::Meter do
       end
     end
   end
+  describe '#what_changed_meter_list_for_property' do
+    let(:property_id) { 680_01 }
+    let(:date) { '2010-07-31' }
+    before do
+      stub_get("/property/#{property_id}/meter/whatChanged")
+        .to_return(body: fixture('what_changed_meter_list.xml'))
+    end
+    it 'returns a list of changed meters' do
+      client.what_changed_meter_list_for_property(property_id, date)['response']['links']['link'].each do |link|
+        expect(link).to include '@link'
+      end
+    end
+  end
   describe '#consumption_data' do
     let(:id) { 680_01 }
     before do
