@@ -1,0 +1,8 @@
+<response status="Ok">
+  <links>
+    <link id="861" httpMethod="GET" link="/meter/861" linkDescription="This is the GET url for this Meter." hint="Electric Meter"/>
+    <link id="341" httpMethod="GET" link="/meter/341" linkDescription="This is the GET url for this Meter." hint="NG Meter"/>
+    <link httpMethod="GET" link="/property/100/meter/whatChanged?nextPageKey=4000&amp;date=2010-07-31" linkDescription="next page"/>
+    <link httpMethod="GET" link="/property/100/meter/whatChanged?previousPageKey=3000&amp;date=2010-07-31" linkDescription="previous page"/>
+  </links>
+</response>
